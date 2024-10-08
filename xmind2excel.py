@@ -1,7 +1,7 @@
 '''
 Author: qiaoxueyuan
 Date: 2024-08-27 10:49:03
-LastEditTime: 2024-08-27 11:00:06
+LastEditTime: 2024-09-11 14:05:46
 FilePath: xmind2excel.py
 '''
 from xmindparser import xmind_to_dict
@@ -38,11 +38,11 @@ def xm_parse(dic, pre_data=[]):
 
 
 def main():
-    x_flie = r"in.xmind"
-    out_file = r"out.xlsx"
+    in_flie = r"/Users/admin/Downloads/TTS池化测试分析.xmind"
+    out_file = r"/Users/admin/Downloads/TTS池化测试分析.xlsx"
     temp = []
     max_cols = 0
-    json_data = xmind_to_dict(x_flie)
+    json_data = xmind_to_dict(in_flie)
     # 提取数据，并找出最大深度(列数)
     for i, j in xm_parse(json_data[0]['topic']):
         temp.append(j)
